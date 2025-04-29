@@ -12,7 +12,7 @@ home-manager.users.flynn = {
     
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nixos-rebuild switch";
+        update = "sudo nixos-rebuild -I nixos-config=~/.nix/configuration.nix switch";
 	cd="z";
       };
       history.size = 10000;
