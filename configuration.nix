@@ -137,6 +137,7 @@
 	networkmanager
 	swaynotificationcenter
 	nerdfonts
+	#end waybar dependencies
 	spotify
     ];
   };
@@ -154,12 +155,12 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 	wget
-	wl-clipboard
+	wl-clipboard #for neovim
 	kitty
 	rofi-wayland
-	hyprpaper
+	hyprpaper #wallpaper software
 	zoxide
-	nwg-look
+	nwg-look #for setting the cursor as recommended by hyprland
 	nix-zsh-completions
 	git
 	gh
