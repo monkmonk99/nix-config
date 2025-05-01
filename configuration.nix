@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./home.nix
+      ./waybar.nix
     ];
 
   hardware.graphics = {
@@ -129,14 +130,6 @@
     #  thunderbird
     	vimix-cursor-theme
 	#waybar dependencies
-	waybar
-	hyprpicker
-	pywal
-	blueman
-	bluez
-	networkmanager
-	swaynotificationcenter
-	nerdfonts
 	#end waybar dependencies
 	spotify
     ];
