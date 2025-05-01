@@ -1,26 +1,35 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+
+services.xserver = {
+	windowManager.i3 = {
+		enable = true;
+	};
+};
 environment.systemPackages = with pkgs; [
-    grim # screenshot functionality
-    slurp # screenshot functionality
-    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-    mako # notification system developed by swaywm maintainer
+	rofi
+	dunst
+	feh
+	picom
+	polybar
+	i3lock-color
+	lxappearance
 ];
-services.gnome.gnome-keyring.enable = true;
 
-#enabling outside home-manager to give display managers access
-programs.sway.enable = true; 
-
-home-manager.users.flynn = {
-	wayland.windowManager.sway = {
-	  wrapperFeatures.gtk = true;
-	  config = rec {
-	  modifier = "Mod4";
-	  terminal = "kitty";
-	  startup = [
-	  ];
-	  };
-        };
+#Key todos here are 
+#install dunst, nm-applet, feh, maybe picom, polybar, xrandr, i3lock-color
+# theming can be done with materia-gtk-theme and maybe papirus-icon-theme although maybe theres
+# a nerdfonts alternative. lxappearance is recommended for changing the theme but a cli way would
+# be better to me
+# also a package update indicator would be good imo
+  home-manager.users.flynn = { config, pkgs, ... }: {
+  	
+	xdg.configFile = {
+		"i3" = {
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/i3";
+		      recursive = true;
+		};
+	};
 };
 }

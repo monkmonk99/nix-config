@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./home.nix
       ./waybar.nix
+      ./i3.nix
     ];
 
   hardware.graphics = {
@@ -68,7 +69,7 @@
   time.timeZone = "Australia/Sydney";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n.defaultLocale = "en_AU.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_AU.UTF-8";
@@ -91,12 +92,12 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "gb";
+    layout = "us";
     variant = "";
   };
 
   # Configure console keymap
-  console.keyMap = "uk";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
