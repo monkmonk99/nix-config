@@ -15,6 +15,12 @@ environment.systemPackages = with pkgs; [
 	polybar
 	i3lock-color
 	lxappearance
+	xss-lock
+	pulseaudio
+	networkmanagerapplet
+	xclip
+	dunst
+	picom
 ];
 
 #Key todos here are 
@@ -28,6 +34,10 @@ environment.systemPackages = with pkgs; [
 	xdg.configFile = {
 		"i3" = {
 		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/i3";
+		      recursive = true;
+		};
+		"polybar" = {
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/polybar";
 		      recursive = true;
 		};
 	};

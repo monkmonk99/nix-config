@@ -23,6 +23,11 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+# Monitor configuration
+exec_always --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144 --primary
+exec_always --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 60 --right-of DP-0
+
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -49,10 +54,10 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+q exec kitty
+bindsym $mod+t exec kitty
 
 # kill focused window
-bindsym $mod+Shift+c kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -138,6 +143,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# Shutdown the computer
+bindsym $mod+Shift+End exec shutdown -h now
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -156,11 +164,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+exec_always i3-msg 'debuglog on; shmlog on; reload'
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Styling
 
@@ -178,4 +183,4 @@ client.background       #ffffff
 
 gaps inner 10px
 
-exec_always --no-startup-id feh --bg-scale ~/Pictures/waves.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/waves.jpg --bg-fill ~/Pictures/waves.jpg

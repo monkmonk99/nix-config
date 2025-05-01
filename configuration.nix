@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./home.nix
-      ./waybar.nix
       ./i3.nix
     ];
 
@@ -125,7 +124,7 @@
   users.users.flynn = {
     isNormalUser = true;
     description = "flynn";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
     #  thunderbird
@@ -139,7 +138,6 @@
   # Install firefox.
   programs.zsh.enable = true;
   programs.firefox.enable = true;
-  programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -149,20 +147,21 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 	wget
-	wl-clipboard #for neovim
+	# wl-clipboard #for neovim wayland only
 	kitty
-	rofi-wayland
-	hyprpaper #wallpaper software
+	# rofi-wayland wayland only
+	# hyprpaper #wallpaper software
 	zoxide
-	nwg-look #for setting the cursor as recommended by hyprland
+	# nwg-look #for setting the cursor as recommended by hyprland
 	nix-zsh-completions
 	git
 	gh
   ];
 
-  environment.sessionVariables = rec {
-	NIXOS_OZONE_WL = "1";
-  };
+# This was to improve electron apps on wayland
+#environment.sessionVariables = rec {
+#	NIXOS_OZONE_WL = "1";
+#  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
