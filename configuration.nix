@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./home.nix
       ./i3.nix
+      ./kitty.nix
     ];
 
   hardware.graphics = {
@@ -132,6 +133,7 @@
 	#waybar dependencies
 	#end waybar dependencies
 	spotify
+	flameshot
     ];
   };
 
@@ -148,7 +150,6 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 	wget
 	# wl-clipboard #for neovim wayland only
-	kitty
 	# rofi-wayland wayland only
 	# hyprpaper #wallpaper software
 	zoxide

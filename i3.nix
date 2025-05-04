@@ -8,11 +8,11 @@ services.xserver = {
 	};
 };
 environment.systemPackages = with pkgs; [
+	polybarFull
 	rofi
 	dunst
 	feh
 	picom
-	polybar
 	i3lock-color
 	lxappearance
 	xss-lock
@@ -21,6 +21,12 @@ environment.systemPackages = with pkgs; [
 	xclip
 	dunst
 	picom
+	pywal
+
+];
+
+fonts.packages = with pkgs; [
+	(nerdfonts.override { fonts = [ "CodeNewRoman" ]; })
 ];
 
 #Key todos here are 
@@ -30,7 +36,6 @@ environment.systemPackages = with pkgs; [
 # be better to me
 # also a package update indicator would be good imo
   home-manager.users.flynn = { config, pkgs, ... }: {
-  	
 	xdg.configFile = {
 		"i3" = {
 		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/i3";
@@ -38,6 +43,10 @@ environment.systemPackages = with pkgs; [
 		};
 		"polybar" = {
 		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/polybar";
+		      recursive = true;
+		};
+		"rofi" = {
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/rofi";
 		      recursive = true;
 		};
 	};
