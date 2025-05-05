@@ -16,8 +16,12 @@ home-manager.users.flynn = {
 
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "thefuck" ];
+        plugins = [ "git" "thefuck" "sudo"];
         theme = "agnoster";
+	extraConfig = "
+		typeset -A ZSH_HIGHLIGHT_STYLES
+		ZSH_HIGHLIGHT_STYLES[comment]='fg=magenta'
+	";
       };
     };
 
@@ -25,5 +29,7 @@ home-manager.users.flynn = {
     enable = true;
     enableZshIntegration = true;
     };
+
+    programs.thefuck.enable = true;
 };
 }

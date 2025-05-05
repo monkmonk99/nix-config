@@ -157,6 +157,7 @@
 	nix-zsh-completions
 	git
 	gh
+	vscode
   ];
 
 # This was to improve electron apps on wayland

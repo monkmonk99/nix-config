@@ -21,7 +21,7 @@ environment.systemPackages = with pkgs; [
 	xclip
 	dunst
 	picom
-	pywal
+	wallust
 
 ];
 
@@ -47,6 +47,10 @@ fonts.packages = with pkgs; [
 		};
 		"rofi" = {
 		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/rofi";
+		      recursive = true;
+		};
+		"wallust" = {
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/wallust";
 		      recursive = true;
 		};
 	};
