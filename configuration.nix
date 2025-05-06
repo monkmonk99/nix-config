@@ -11,7 +11,7 @@
       ./home.nix
       ./i3.nix
       ./kitty.nix
-      ./desktop/specific.nix
+      ./untracked.nix
     ];
 
   hardware.graphics = {
