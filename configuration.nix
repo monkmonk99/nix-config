@@ -11,6 +11,7 @@
       ./home.nix
       ./i3.nix
       ./kitty.nix
+      ./desktop/specific.nix
     ];
 
   hardware.graphics = {
@@ -138,7 +139,6 @@
   };
 
   # Install firefox.
-  programs.zsh.enable = true;
   programs.firefox.enable = true;
 
   # Allow unfree packages

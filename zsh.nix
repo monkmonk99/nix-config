@@ -1,6 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+programs.zsh.enable = true; #not sure if this is necessary
 home-manager.users.flynn = {
    programs.zsh = {
       enable = true;

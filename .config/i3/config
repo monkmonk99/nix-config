@@ -23,12 +23,6 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# Monitor configuration
-exec_always --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144 --primary
-exec_always --no-startup-id xrandr --output DP-4 --off 
-# --mode 1920x1080 --rate 60 --right-of DP-0
-
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
