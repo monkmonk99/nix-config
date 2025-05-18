@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./home.nix
-      ./i3.nix
       ./kitty.nix
       ./untracked.nix
     ];
