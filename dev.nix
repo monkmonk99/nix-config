@@ -4,15 +4,12 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-home-manager.users.flynn = {
-	programs.neovim = {
-	  enable = true;
-	  defaultEditor = true;
-	  extraConfig = ''
-	    set number relativenumber
-	    set tabstop=2 softtabstop=2 shiftwidth=2
-	    set expandtab
-	  '';
-	};	
-};
+  environment.systemPackages = with pkgs; [
+    rustup
+    gcc
+  ];
+
+  home-manager.users.flynn = { pkgs, ... }: {
+    home.sessionPath = [ "$HOME/.cargo/bin" ];
+  };
 }

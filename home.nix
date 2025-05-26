@@ -4,9 +4,9 @@
   imports =
     [
       <home-manager/nixos>
-      ./zsh.nix
-      ./nvim.nix
     ];
+
+  home-manager.backupFileExtension = "hmbackup";
 
   users.users.flynn.isNormalUser = true;
   home-manager.users.flynn = { pkgs, ... }: {

@@ -1,6 +1,10 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+
+environment.systemPackages = with pkgs; [
+  killall
+];
 programs.zsh.enable = true; #not sure if this is necessary
 home-manager.users.flynn = {
    programs.zsh = {
@@ -10,8 +14,9 @@ home-manager.users.flynn = {
     
       shellAliases = {
         ll = "ls -l";
-        update = "sudo nixos-rebuild -I nixos-config=/home/flynn/.nix/configuration.nix switch";
+        update = "sudo nixos-rebuild switch";
 	cd="z";
+	picomoff="killall picom";
       };
       history.size = 10000;
 

@@ -199,5 +199,20 @@ gaps inner 10px
 exec_always --no-startup-id wallust cs ~/.cache/wallust/1.5_4_2_00_0_0_0_0_l1u3t5.json
 exec_always --no-startup-id feh --bg-fill ~/Pictures/bmountains.jpg --bg-fill ~/Pictures/bmountains.jpg
 
-#launch polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+  i3bar_command i3bar -t
+  status_command i3status
+  position top
+  tray_output primary
+  font pango:CodeNewRoman Nerd Font Propo Bold 10
+  colors {
+    background #000000C0
+    focused_workspace $active   $active   $fg
+    active_workspace $inactive $inactive $fg
+    urgent_workspace $urgent   $urgent   $fg
+  }
+  padding 1px 2px
+}
+
+#launch picom
+exec --no-startup-id picom --backend glx -b
