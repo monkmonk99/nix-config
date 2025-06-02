@@ -11,6 +11,12 @@ environment.systemPackages = with pkgs; [
 	networkmanager
 	swaynotificationcenter #wayland specific
 	nerdfonts
+	wl-clipboard #for neovim wayland only
+	rofi-wayland # wayland only
+	hyprpaper #wallpaper software
+	zoxide
+	nwg-look #for setting the cursor as recommended by hyprland
+	pywal16
 ];
 environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
