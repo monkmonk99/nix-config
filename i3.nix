@@ -20,9 +20,8 @@ environment.systemPackages = with pkgs; [
 	pulseaudio
 	networkmanagerapplet
 	xclip
-	dunst
-	wallust
   picom
+  pywal16
 ];
 
 fonts.packages = with pkgs; [
