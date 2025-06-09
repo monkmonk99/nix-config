@@ -126,17 +126,18 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+1 move container to workspace number $ws1;workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2;workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3;workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4;workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5;workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6;workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7;workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8;workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9;workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10;workspace number $ws10;
+
 exec_always --no-startup-id i3-msg 'debuglog on; shmlog on; reload'
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -196,7 +197,7 @@ gaps inner 10px
 
 
 # reset colours with pywal
-exec_always --no-startup-id wallust cs ~/.cache/wallust/1.5_4_2_00_0_0_0_0_l1u3t5.json
+exec_always --no-startup-id wal -R
 exec_always --no-startup-id feh --bg-fill ~/Pictures/bmountains.jpg --bg-fill ~/Pictures/bmountains.jpg
 
 bar {

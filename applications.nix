@@ -21,6 +21,7 @@
     flameshot
     vimix-cursor-theme
     kitty
+    yazi
   ];
 
   # Steam
@@ -32,6 +33,9 @@
   };
 
   # Kitty config symlink
+  environment.sessionVariables = {
+    TERMINAL = "kitty";
+  };
   home-manager.users.flynn = { config, pkgs, ... }: {
     xdg.configFile = {
       "kitty" = {
