@@ -15,8 +15,8 @@ home-manager.users.flynn = {
       shellAliases = {
         ll = "ls -l";
         update = "sudo nixos-rebuild switch";
-	cd="z";
-	picomoff="killall picom";
+        cd="z";
+        picomoff="killall picom";
       };
       history.size = 10000;
 

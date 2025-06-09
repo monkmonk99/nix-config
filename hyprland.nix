@@ -17,6 +17,7 @@ environment.systemPackages = with pkgs; [
 	zoxide
 	nwg-look #for setting the cursor as recommended by hyprland
 	pywal16
+  brightnessctl
 ];
 environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

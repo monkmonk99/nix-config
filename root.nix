@@ -8,12 +8,12 @@
     [
     #important imports
       ./home.nix #for configuring home-manager
+      ./user.nix #for configuring user specific config
       ./untracked.nix #for things specific to hardware/usecase
       ./applications.nix #for low config applications like discord
       ./dev.nix #for apps/config around development
     #modules
     #things that need enough configuration to demand their own file
-      ./i3.nix
       ./zsh.nix
       ./nvim.nix
     ];

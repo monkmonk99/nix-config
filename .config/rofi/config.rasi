@@ -151,7 +151,6 @@ configuration {
 
 
 /* Dark theme. */
-@import "colors"
 
 
 #window {

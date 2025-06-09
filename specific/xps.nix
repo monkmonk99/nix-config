@@ -10,8 +10,8 @@ services.xserver.dpi = 192;
 services.libinput = {
 	enable = true;
 	touchpad = {
-		naturalScrolling = true;
 		accelSpeed = "0.3";
+    naturalScrolling = true;
 	};
 };
 environment.variables = {
@@ -19,7 +19,6 @@ environment.variables = {
     GDK_DPI_SCALE = "0.5";
     _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2";
   };
-home-manager.backupFileExtension = "hm-backup"; 
 home-manager.users.flynn = { config, pkgs, ... }: {
 	programs.rofi.extraConfig = {
 		dpi = "192";
@@ -53,4 +52,8 @@ home-manager.users.flynn = { config, pkgs, ... }: {
 	};
 	
 };
+
+# makes the laptop work with displaylink usb hubs
+services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+
 }
