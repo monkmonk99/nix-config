@@ -17,7 +17,7 @@
     git
     gh
     vscode
-    spotify
+    ncspot
     flameshot
     vimix-cursor-theme
     kitty
