@@ -44,4 +44,9 @@
       };
     };
   };
+
+  # Set yazi as default file explorer
+  xdg.mime.defaultApplications = {
+    "inode/directory" = "yazi.desktop";
+  };
 }

@@ -172,8 +172,6 @@ workspace 2 output DP-4
 
 # Styling
 
-exec_always --no-startup-id xrdb -merge -quiet ~/.config/Xresources
-
 default_border pixel 3
 default_floating_border pixel 4
 
@@ -198,7 +196,7 @@ gaps inner 10px
 
 # reset colours with pywal
 exec_always --no-startup-id wal -R
-exec_always --no-startup-id feh --bg-fill ~/Pictures/bmountains.jpg --bg-fill ~/Pictures/bmountains.jpg
+# exec_always --no-startup-id feh --bg-fill ~/Pictures/bmountains.jpg --bg-fill ~/Pictures/bmountains.jpg
 
 bar {
   i3bar_command i3bar -t

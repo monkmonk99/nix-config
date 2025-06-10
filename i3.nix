@@ -44,10 +44,10 @@ home-manager.users.flynn = { config, pkgs, ... }: {
 		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/rofi";
 		      recursive = true;
 		};
-		"wallust" = {
-		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/wallust";
-		      recursive = true;
-		};
+#		"wallust" = {
+#		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/wallust";
+#		      recursive = true;
+#		};
 #		"picom" = {
 #		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/picom";
 #		      recursive = true;
