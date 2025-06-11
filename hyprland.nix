@@ -29,11 +29,11 @@ fonts.packages = with pkgs; [
   	
 	xdg.configFile = {
 		"waybar" = {
-		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/waybar";
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/waybar";
 		      recursive = true;
 		};
 		"hypr" = {
-		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/hypr";
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/hypr";
 		      recursive = true;
 		};
 	};

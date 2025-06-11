@@ -37,19 +37,19 @@ fonts.packages = with pkgs; [
 home-manager.users.flynn = { config, pkgs, ... }: {
 	xdg.configFile = {
 		"i3" = {
-		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/i3";
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/i3";
 		      recursive = true;
 		};
 		"rofi" = {
-		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/rofi";
+		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/rofi";
 		      recursive = true;
 		};
 #		"wallust" = {
-#		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/wallust";
+#		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/wallust";
 #		      recursive = true;
 #		};
 #		"picom" = {
-#		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/picom";
+#		      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/picom";
 #		      recursive = true;
 #		};
 	};

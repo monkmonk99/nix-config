@@ -39,7 +39,7 @@
   home-manager.users.flynn = { config, pkgs, ... }: {
     xdg.configFile = {
       "kitty" = {
-            source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/.config/kitty";
+            source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix/config/kitty";
             recursive = true;
       };
     };
