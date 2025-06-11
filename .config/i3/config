@@ -195,7 +195,7 @@ gaps inner 10px
 
 
 # reset colours with pywal
-exec_always --no-startup-id wal -R
+# exec_always --no-startup-id wal -R
 # exec_always --no-startup-id feh --bg-fill ~/Pictures/bmountains.jpg --bg-fill ~/Pictures/bmountains.jpg
 
 bar {

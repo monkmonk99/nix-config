@@ -54,4 +54,9 @@ home-manager.users.flynn = { config, pkgs, ... }: {
 #		};
 	};
 };
-}
+
+ # Rerun pywal
+ services.xserver.displayManager.sessionCommands = ''
+    wal -R &
+ '';
+ }
