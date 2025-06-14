@@ -22,6 +22,7 @@ environment.systemPackages = with pkgs; [
 	xclip
   picom
   pywal16
+  fastfetch
 ];
 
 fonts.packages = with pkgs; [

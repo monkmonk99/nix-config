@@ -22,6 +22,7 @@
     vimix-cursor-theme
     kitty
     yazi
+    fzf # req for yazi zoxide navigation
   ];
 
   # Steam
