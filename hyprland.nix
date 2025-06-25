@@ -1,6 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+services.displayManager.defaultSession = "hyprland";
 programs.hyprland.enable = true;
 environment.systemPackages = with pkgs; [
 	waybar

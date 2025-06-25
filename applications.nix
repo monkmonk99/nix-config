@@ -46,8 +46,9 @@
     };
   };
 
-  # Set yazi as default file explorer
+  # Set default apps
   xdg.mime.defaultApplications = {
     "inode/directory" = "yazi.desktop";
+    "application/pdf" = "firefox.desktop";
   };
 }
