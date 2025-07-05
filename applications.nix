@@ -19,7 +19,6 @@
     vscode
     ncspot
     flameshot
-    vimix-cursor-theme
     kitty
     yazi
     fzf # req for yazi zoxide navigation

@@ -13,7 +13,7 @@
         enableCompletion = true;
         syntaxHighlighting.enable = true;
 
-        initExtra = ''
+        initContent = ''
           fastfetch
         '';
 

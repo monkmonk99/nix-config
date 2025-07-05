@@ -23,11 +23,6 @@ home-manager.users.flynn = { config, pkgs, ... }: {
 	programs.rofi.extraConfig = {
 		dpi = "235";
 	};
-	home.pointerCursor = {
-	    size = 48;
-	    package = pkgs.vimix-cursors;
-	    name = "Vimix-white-cursors";
-	};
 	#monitor configuration
 	services.autorandr.enable = true;
 	programs.autorandr = {

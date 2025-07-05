@@ -25,8 +25,8 @@ environment.systemPackages = with pkgs; [
   fastfetch
 ];
 
-fonts.packages = with pkgs; [
-	(nerdfonts.override { fonts = [ "CodeNewRoman" ]; })
+fonts.packages = [
+  pkgs.nerd-fonts.code-new-roman
 ];
 
 #Key todos here are 

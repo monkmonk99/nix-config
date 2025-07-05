@@ -3,6 +3,7 @@
 {
 
   environment.systemPackages = with pkgs; [
+  neovim
 	# common prereqs for nvim distros
 	ripgrep
 	fd
@@ -11,7 +12,6 @@
   environment.sessionVariables.EDITOR = "nvim";#not sure this is necessary
   home-manager.users.flynn = { config, pkgs, ... }: {
     programs.neovim = {
-      enable = true;
       defaultEditor = true;
       #extraConfig = ''
       #  set number relativenumber
