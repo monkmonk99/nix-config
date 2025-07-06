@@ -24,11 +24,12 @@ environment.systemPackages = with pkgs; [
   picom
   pywal16
   fastfetch
+  vimix-cursors
 ];
 
-fonts.packages = with pkgs; [
-	(nerdfonts.override { fonts = [ "CodeNewRoman" ]; })
-];
+  fonts.packages = [
+    pkgs.nerd-fonts.code-new-roman
+  ];
 
 #Key todos here are 
 #install dunst, nm-applet, feh, maybe picom, xrandr, i3lock-color
