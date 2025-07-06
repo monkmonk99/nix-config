@@ -19,7 +19,6 @@
     vscode
     ncspot
     flameshot
-    vimix-cursor-theme
     kitty
     yazi
     fzf # req for yazi zoxide navigation
@@ -46,8 +45,9 @@
     };
   };
 
-  # Set yazi as default file explorer
+  # Set default apps
   xdg.mime.defaultApplications = {
     "inode/directory" = "yazi.desktop";
+    "application/pdf" = "firefox.desktop";
   };
 }

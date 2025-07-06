@@ -27,6 +27,7 @@ environment.systemPackages = with pkgs; [
   vimix-cursors
 ];
 
+
   fonts.packages = [
     pkgs.nerd-fonts.code-new-roman
   ];

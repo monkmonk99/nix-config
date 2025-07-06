@@ -6,10 +6,13 @@
 {
   environment.systemPackages = with pkgs; [
     rustup
-    gcc
+    python313
+    clang
+    clang-tools
   ];
 
   home-manager.users.flynn = { pkgs, ... }: {
     home.sessionPath = [ "$HOME/.cargo/bin" ];
   };
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
