@@ -19,6 +19,7 @@ environment.systemPackages = with pkgs; [
 	xss-lock
 	pulseaudio
 	networkmanagerapplet
+  playerctl
 	xclip
   picom
   pywal16
