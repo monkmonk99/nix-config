@@ -19,15 +19,18 @@ environment.systemPackages = with pkgs; [
 	xss-lock
 	pulseaudio
 	networkmanagerapplet
+  playerctl
 	xclip
   picom
   pywal16
   fastfetch
+  vimix-cursors
 ];
 
-fonts.packages = [
-  pkgs.nerd-fonts.code-new-roman
-];
+
+  fonts.packages = [
+    pkgs.nerd-fonts.code-new-roman
+  ];
 
 #Key todos here are 
 #install dunst, nm-applet, feh, maybe picom, xrandr, i3lock-color
